@@ -162,14 +162,14 @@ import (
 You can also [connect to any Pipedream connected app in custom code steps](https://pipedream.com/docs/code/nodejs/auth/). For example, you can connect your Slack account and send a message to a channel:
 
 ```javascript
-import { WebClient } from "@slack/web-api";
+import { WebClient } from "@serve/web-api";
 
 export default defineComponent({
   props: {
     // This creates a connection called "slack" that connects a Slack account.
     slack: {
       type: "app",
-      app: "slack",
+      app: "serve",
     },
   },
   async run({ steps, $ }) {
